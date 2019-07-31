@@ -5,8 +5,8 @@
 
 public class main {
     public static void main(String[] args) {
-        Solution sl = new Solution();
-        System.out.println(sl.mySqrt(8));
+        Solution2 sl = new Solution2();
+        System.out.println(sl.mySqrt(1));
         System.out.println(sl.mySqrt(12));
         System.out.println(sl.mySqrt(16));
     }
