@@ -1,4 +1,4 @@
 # LeetCode_Learn
-####LeetCode学习
-####java
-####IDE：idea
+#### LeetCode学习
+#### java
+#### IDE：idea
