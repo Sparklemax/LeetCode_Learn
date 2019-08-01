@@ -5,7 +5,7 @@
 
 public class main {
     public static void main(String[] args) {
-        Solution sl = new Solution();
+        Solution3 sl = new Solution3();
         System.out.println(sl.climbStairs(2));
         System.out.println(sl.climbStairs(5));
         System.out.println(sl.climbStairs(7));
