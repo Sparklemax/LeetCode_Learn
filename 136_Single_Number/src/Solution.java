@@ -13,16 +13,15 @@ import java.util.Map;
 public class Solution {
     public int singleNumber(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i : nums
-        ) {
-            if(map.get(i)==null)//如果是未添加过的，则置1
+        for (int i: nums
+             ) {
+            if(map.get(i)==null)
                 map.put(i,1);
-            else//如果已经出现过， 则置-1
+            else
                 map.put(i,-1);
-
         }
-        for (int i : nums
-        ) {
+        for (int i:nums
+             ) {
             if(map.get(i)==1)
                 return i;
         }
