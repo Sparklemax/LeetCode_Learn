@@ -8,6 +8,10 @@
  * 1. i==j, dp[i][j]=true;
  * 2. i+1==j,需要判断s[i]和s[j]是否相等
  * 3. i+1<j时，dp[i][j] = dp[i+1][j-1]&&s[i]==[j].
+ *
+ * 复杂度分析：
+ * 时间复杂度：o(n2)
+ * 空间复杂度：o(n2)
  * */
 
 class Solution {
@@ -17,7 +21,7 @@ class Solution {
         int st = 0, end = 0;
         char[] chars = s.toCharArray();
         boolean[][] dp = new boolean[len][len];
-        for (int i = 0; i < len; i++) {w
+        for (int i = 0; i < len; i++) {
             dp[i][i] = true;
             for (int j = 0; j < i; j++) {
                 if (j + 1 == i)

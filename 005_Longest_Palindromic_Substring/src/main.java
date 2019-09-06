@@ -5,7 +5,8 @@
 
 public class main {
     public static void main(String[] args) {
-        Solution sl = new Solution();
+        Solution2 sl = new Solution2();
+        System.out.println(sl.longestPalindrome(""));
         System.out.println(sl.longestPalindrome("babad"));
         System.out.println(sl.longestPalindrome("abbd"));
         System.out.println(sl.longestPalindrome("aEEdg"));
