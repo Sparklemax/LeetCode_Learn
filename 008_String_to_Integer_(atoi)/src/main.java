@@ -10,6 +10,7 @@ public class main {
 //        System.out.println(sl.myAtoi("    -42"));
 //        System.out.println(sl.myAtoi("4193 with words"));
 //        System.out.println(sl.myAtoi("words and 987"));
-        System.out.println(sl.myAtoi("-91283472332"));
+//        System.out.println(sl.myAtoi("-91283472332"));
+        System.out.println(sl.myAtoi("2147483648"));
     }
 }
