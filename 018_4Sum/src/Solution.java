@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,42 +20,42 @@ class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         int len = nums.length;
-        if(len<4)
+        if(len < 4)
             return res;
-        Arrays.sort(nums);
+        Arrays.sort(nums);//排序
         int max = nums[len-1];
-        if(4 * max < target)
+        if(4*max < target)
             return res;
         for (int i = 0; i < len-3;) {
-            if(nums[i] * 4 > target)//当前最小元素的四倍已经大于target的时候就可以退出了
-                break;
+            if(4*nums[i]>target)
+                break;//如果当前最小值的四倍已经大于target了就可以退出了
             if(nums[i] + 3*max<target){
-                while (nums[i] == nums[++i] && i<len-3);
+                while (nums[i]==nums[++i]&&i<len-3);
                 continue;
             }
-            for (int j = i+1; j < len-2;) {
-                int subSum = nums[i] + nums[j];
-                if (nums[i]+nums[j]*3>target)
-                    break;//当前最小元素的四倍已经大于target的时候就可以退出了
-                if(subSum+2*max<target){
-                    while (nums[j]==nums[++j] && j<len-2);
+            for (int j = 0; j < len-2;) {
+                int subsum = nums[i]+nums[j];
+                if(nums[i]+nums[j]*3 > target)
+                    break;//当前坑的最小的数值加起来大于target，可以退出了
+                if(subsum+ 2* max < target){
+                    while (nums[j]==nums[++j]);
                     continue;
                 }
-                int left = j+1,right = len-1;
+
+                int left = j+1;
+                int right = len-1;
                 while (left<right){
-                    int sum = subSum + nums[left] + nums[right];
+                    int sum = subsum + nums[left] + nums[right];
                     if(sum == target){
                         res.add(Arrays.asList(nums[i],nums[j],nums[left],nums[right]));
-                        while (nums[left]==nums[++left] && left <right);
-                        while (nums[right] == nums[--right] && left <right);
-                    } else if(sum < target)
-                        ++left;
-                    else --right;
+
+                    }
+                    else if
                 }
-                while (nums[j]==nums[++j] && j<len-2);//去重
+
             }
-            while (nums[i] == nums[++i]&&i<len-3);//去重
         }
+
         return res;
     }
 }
